@@ -1,0 +1,227 @@
+{
+  "mode": "pattern-and-model",
+  "date": "2026-09-29",
+  "model": "Xenova/distilbert-base-multilingual-cased-ner-hrl",
+  "modelRevision": "c2a4dbf593c57f47004c5bc2d3770d311aee9c43",
+  "transformersJsVersion": "4.3.0",
+  "passages": 13,
+  "totalAnswerKeyItems": 69,
+  "uniqueAnswerKeyItems": 66,
+  "repeatedEntityCases": [
+    {
+      "passageId": "en-repeated",
+      "key": "elena vasquez:person",
+      "count": 4
+    }
+  ],
+  "repeatedEntityResults": [
+    {
+      "passageId": "en-repeated",
+      "text": "elena vasquez",
+      "type": "person",
+      "expected": 4,
+      "detected": 4
+    }
+  ],
+  "nearMisses": [
+    {
+      "passageId": "en-field-visit",
+      "expected": "village Koro-Segou",
+      "got": "Koro-Segou",
+      "type": "place"
+    },
+    {
+      "passageId": "fr-visite",
+      "expected": "42 ans",
+      "got": "âgée de 42 ans",
+      "type": "age"
+    },
+    {
+      "passageId": "fr-reunion",
+      "expected": "enfant mineur non accompagné",
+      "got": "enfant mineur",
+      "type": "context"
+    }
+  ],
+  "contextFalsePositiveSamples": [],
+  "totals": {
+    "tp": 62,
+    "fn": 7,
+    "fp": 8,
+    "recall": "0.899",
+    "precision": "0.886"
+  },
+  "byCategory": {
+    "person": {
+      "n": 11,
+      "uniqueItems": 8,
+      "tp": 10,
+      "fn": 1,
+      "fp": 1,
+      "recall": "0.909",
+      "precision": "0.909"
+    },
+    "age": {
+      "n": 4,
+      "uniqueItems": 4,
+      "tp": 2,
+      "fn": 2,
+      "fp": 1,
+      "recall": "0.500",
+      "precision": "0.667"
+    },
+    "camp_address": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "place": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 1,
+      "fn": 1,
+      "fp": 3,
+      "recall": "0.500",
+      "precision": "0.250"
+    },
+    "email": {
+      "n": 4,
+      "uniqueItems": 4,
+      "tp": 4,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "phone": {
+      "n": 6,
+      "uniqueItems": 6,
+      "tp": 6,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "gps": {
+      "n": 3,
+      "uniqueItems": 3,
+      "tp": 1,
+      "fn": 2,
+      "fp": 0,
+      "recall": "0.333",
+      "precision": "1.000"
+    },
+    "date_of_birth": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "address": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "postal_code": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "payment_card": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "ip": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "organization": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 2,
+      "recall": "1.000",
+      "precision": "0.500"
+    },
+    "context": {
+      "n": 13,
+      "uniqueItems": 13,
+      "tp": 12,
+      "fn": 1,
+      "fp": 1,
+      "recall": "0.923",
+      "precision": "0.923"
+    },
+    "passport_mrz": {
+      "n": 1,
+      "uniqueItems": 1,
+      "tp": 1,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "id_number": {
+      "n": 5,
+      "uniqueItems": 5,
+      "tp": 5,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "imei": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "sin": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    },
+    "iban": {
+      "n": 2,
+      "uniqueItems": 2,
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "recall": "1.000",
+      "precision": "1.000"
+    }
+  }
+}

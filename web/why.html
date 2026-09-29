@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="i18n-title" content="why.title">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <title>Why this matters</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <strong data-i18n="home.title">Before You Paste</strong>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="practice.html" data-i18n="nav.practice">Practice</a></li>
+          <li><a href="why.html" data-i18n="nav.why">Why this matters</a></li>
+          <li><a href="facilitator.html" data-i18n="nav.facilitator">Facilitator</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="lang-switch" class="lang-switch" data-i18n="lang.switch">Français</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <p class="lang-notice lang-notice-prominent" data-i18n="lang.notice" hidden>French notice</p>
+    <h1 data-i18n="why.title">Why this matters</h1>
+
+    <section class="warning local-risk-full">
+      <h2 data-i18n="why.riskTitle">Local risks in your browser</h2>
+      <ul>
+        <li data-i18n="risk.extensions">Browser extensions...</li>
+        <li data-i18n="risk.clipboard">Clipboard history...</li>
+        <li data-i18n="risk.huggingface">Hugging Face...</li>
+      </ul>
+    </section>
+
+    <article class="principle-card">
+      <h2 data-i18n="why.p1.title">Data minimization</h2>
+      <p data-i18n="why.p1.text">Share only what the task needs.</p>
+      <p><a href="https://www.icrc.org/en/data-protection-humanitarian-action-handbook">ICRC Handbook on Data Protection (2024)</a></p>
+    </article>
+
+    <article class="principle-card">
+      <h2 data-i18n="why.p2.title">Purpose limitation</h2>
+      <p data-i18n="why.p2.text">Use data only for the stated humanitarian purpose.</p>
+      <p><a href="https://centre.humdata.org/data-responsibility-guidelines-2025/">OCHA Data Responsibility Guidelines (2025)</a></p>
+    </article>
+
+    <article class="principle-card">
+      <h2 data-i18n="why.p3.title">Mosaic effect</h2>
+      <p data-i18n="why.p3.text">Combined small details can identify people without names.</p>
+      <p>
+        <a href="https://centre.humdata.org/glossary-2/mosaic-effect/">Mosaic effect glossary</a>;
+        <a href="https://centre.humdata.org/exploring-the-mosaic-effect-on-hdx-datasets/">Exploring the Mosaic Effect on HDX</a>;
+        <a href="https://centre.humdata.org/guidance-note-statistical-disclosure-control/">Statistical Disclosure Control</a>
+      </p>
+    </article>
+
+    <article class="principle-card">
+      <h2 data-i18n="why.p4.title">Consent and power imbalance</h2>
+      <p data-i18n="why.p4.text">Affected people may not freely refuse data use.</p>
+      <p><a href="https://www.icrc.org/en/data-protection-humanitarian-action-handbook">ICRC Handbook on Data Protection (2024)</a></p>
+    </article>
+
+    <article class="principle-card">
+      <h2 data-i18n="why.p5.title">Organizational rules first</h2>
+      <p data-i18n="why.p5.text">Your agency's policies override any tool.</p>
+      <p>
+        <a href="https://www.icrc.org/en/publication/building-responsible-humanitarian-approach-icrcs-policy-artificial-intelligence">ICRC Policy on Artificial Intelligence (2024)</a>;
+        <a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics">UNESCO Recommendation on the Ethics of AI (2021)</a>
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.text">ParalleX Labs Inc.</p>
+    <p class="lang-notice-footer" data-i18n="lang.noticeShort">French interface prepared with machine assistance.</p>
+    <p><a href="data-flow.html" data-i18n="footer.dataFlow">Data flow and residual risk</a></p>
+  </footer>
+
+  <script type="module" src="js/ui/why-init.js"></script>
+</body>
+</html>

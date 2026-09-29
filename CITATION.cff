@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: Before You Paste
+message: "If you use this practice lab, please cite it as below."
+type: software
+authors:
+  - family-names: Daneshpajouh
+    given-names: Amirhossein
+    affiliation: ParalleX Labs Inc.
+  - name: ParalleX Labs Inc.
+repository-code: https://github.com/parallexlabs/before-you-paste
+url: https://parallexlabs.github.io/before-you-paste/
+license: Apache-2.0
+license-url: https://www.apache.org/licenses/LICENSE-2.0
+version: 1.0.0
+date-released: 2026-09-29
+keywords:
+  - humanitarian action
+  - data responsibility
+  - privacy
+  - generative AI
+  - training
+preferred-citation:
+  type: generic
+  title: "Before You Paste"
+  authors:
+    - name: ParalleX Labs Inc.
+  year: 2026
+  notes: "Code licensed Apache-2.0; practice content licensed CC BY 4.0."

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data flow and residual risk | Before You Paste</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <strong data-i18n="home.title">Before You Paste</strong>
+      <nav aria-label="Main" data-i18n-aria="nav.main">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="practice.html" data-i18n="nav.practice">Practice</a></li>
+          <li><a href="why.html" data-i18n="nav.why">Why this matters</a></li>
+          <li><a href="facilitator.html" data-i18n="nav.facilitator">Facilitator</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="lang-switch" class="lang-switch" data-i18n="lang.switch">Français</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="content-en">
+      <p class="lang-notice lang-notice-prominent" hidden>French prepared with machine assistance; not yet reviewed by a professional translator.</p>
+      <h1>Data flow and residual risk</h1>
+      <p class="note">This page describes what the practice lab processes, where, and what never leaves your device. It is not a compliance certificate.</p>
+
+      <h2>What is processed where</h2>
+      <table>
+        <caption>Data flow summary</caption>
+        <thead>
+          <tr><th>Data</th><th>Where processed</th><th>Leaves device?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Text you type or paste</td><td>Browser memory only (not sent to a remote server)</td><td>No (except when you copy to the OS clipboard)</td></tr>
+          <tr><td>Detection results and placeholder map</td><td>Browser memory only</td><td>No</td></tr>
+          <tr><td>Restored AI reply output</td><td>Browser memory only</td><td>No</td></tr>
+          <tr><td>Transformers.js library</td><td>Loaded from cdn.jsdelivr.net (<code>@huggingface/transformers@4.3.0</code>) when you use optional name recognition</td><td>Yes (library code)</td></tr>
+          <tr><td>NER model weights</td><td>Downloaded from huggingface.co when you press the download button</td><td>Yes (model files; Hugging Face sees the request, not your text)</td></tr>
+          <tr><td>Practice passages</td><td>Loaded from this site as static JSON</td><td>No (synthetic content only)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Controls mapped to guidance</h2>
+      <table>
+        <caption>Lab controls and sources</caption>
+        <thead>
+          <tr><th>Control in this lab</th><th>ICRC Handbook</th><th>IASC / OCHA guidance</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Permission questions before scanning personal data</td><td>Purpose limitation, accountability, data-protection focal points</td><td><a href="https://centre.humdata.org/revised-iasc-operational-guidance-on-data-responsibility-in-humanitarian-action/">IASC Operational Guidance (2023)</a></td></tr>
+          <tr><td>Human review of every finding; no auto-redaction of context</td><td>Data quality, dignity, minimization</td><td><a href="https://centre.humdata.org/data-responsibility-guidelines-2025/">OCHA Data Responsibility Guidelines (2025)</a></td></tr>
+          <tr><td>Mosaic warnings with operational explanations</td><td>Re-identification risk in small populations</td><td><a href="https://centre.humdata.org/glossary-2/mosaic-effect/">Mosaic effect glossary</a>; <a href="https://centre.humdata.org/guidance-note-statistical-disclosure-control/">Statistical Disclosure Control</a></td></tr>
+          <tr><td>No server storage of user text</td><td>Security and confidentiality</td><td>Data responsibility by design</td></tr>
+          <tr><td>Practice mode uses synthetic examples only</td><td>Training without real beneficiary data</td><td>Responsible data use in learning</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Residual risks (honest)</h2>
+      <ul>
+        <li>Pattern and model detection are incomplete. Measured recall is shown after each scan.</li>
+        <li>Placeholders do not make data anonymous or permitted under your organization's rules.</li>
+        <li>Browser extensions with page access can read text boxes. Clipboard history may retain copied text.</li>
+        <li>Malware or compromised browsers could read memory; this lab cannot prevent that.</li>
+        <li>Optional Transformers.js library (<code>@huggingface/transformers@4.3.0</code>) loads from <code>cdn.jsdelivr.net</code> when you enable name recognition. Subresource integrity cannot be applied to the dynamic module import.</li>
+        <li>Optional model download reveals your IP and timing to Hugging Face and your CDN, not the text content.</li>
+        <li>This lab is a practice and training environment, not organizational approval to use AI with personal data.</li>
+      </ul>
+
+      <p>Primary sources: <a href="https://www.icrc.org/en/data-protection-humanitarian-action-handbook">ICRC Handbook on Data Protection in Humanitarian Action</a>; <a href="https://centre.humdata.org/revised-iasc-operational-guidance-on-data-responsibility-in-humanitarian-action/">IASC Operational Guidance on Data Responsibility</a>.</p>
+    </div>
+
+    <div id="content-fr" hidden>
+      <p class="lang-notice">Français préparé avec assistance automatique; pas encore révisé par un traducteur professionnel.</p>
+      <h1>Flux de données et risque résiduel</h1>
+      <p class="note">Cette page décrit ce que le laboratoire de pratique traite, où, et ce qui ne quitte jamais votre appareil. Ce n'est pas un certificat de conformité.</p>
+
+      <h2>Ce qui est traité où</h2>
+      <table>
+        <caption>Résumé du flux de données</caption>
+        <thead>
+          <tr><th>Donnée</th><th>Où traitée</th><th>Quitte l'appareil ?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Texte saisi ou collé</td><td>Mémoire du navigateur seulement</td><td>Non</td></tr>
+          <tr><td>Résultats et correspondance des espaces réservés</td><td>Mémoire du navigateur seulement</td><td>Non</td></tr>
+          <tr><td>Texte restauré</td><td>Mémoire du navigateur seulement</td><td>Non</td></tr>
+          <tr><td>Bibliothèque Transformers.js</td><td>Chargée depuis cdn.jsdelivr.net (<code>@huggingface/transformers@4.3.0</code>) si reconnaissance de noms activée</td><td>Oui (code bibliothèque)</td></tr>
+          <tr><td>Poids du modèle NER</td><td>Téléchargés depuis huggingface.co sur demande</td><td>Oui (fichiers modèle; Hugging Face voit la demande, pas votre texte)</td></tr>
+          <tr><td>Passages de pratique</td><td>Chargés depuis ce site en JSON statique</td><td>Non (contenu synthétique seulement)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Contrôles et orientations</h2>
+      <table>
+        <caption>Contrôles du laboratoire et sources</caption>
+        <thead>
+          <tr><th>Contrôle</th><th>Manuel CICR</th><th>Orientations CPI / OCHA</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Questions d'autorisation avant analyse</td><td>Limitation de finalité, responsabilité, points focaux</td><td><a href="https://centre.humdata.org/revised-iasc-operational-guidance-on-data-responsibility-in-humanitarian-action/">Orientations opérationnelles du CPI (2023)</a></td></tr>
+          <tr><td>Révision humaine; pas de suppression auto du contexte</td><td>Qualité des données, dignité, minimisation</td><td><a href="https://centre.humdata.org/data-responsibility-guidelines-2025/">Lignes directrices OCHA (2025)</a></td></tr>
+          <tr><td>Avertissements mosaïque opérationnels</td><td>Risque de réidentification dans petites populations</td><td><a href="https://centre.humdata.org/glossary-2/mosaic-effect/">Glossaire effet mosaïque</a>; <a href="https://centre.humdata.org/guidance-note-statistical-disclosure-control/">Contrôle de divulgation statistique</a></td></tr>
+          <tr><td>Pas de stockage serveur du texte utilisateur</td><td>Sécurité et confidentialité</td><td>Responsabilité des données par conception</td></tr>
+          <tr><td>Mode pratique : exemples synthétiques seulement</td><td>Formation sans données réelles</td><td>Usage responsable en apprentissage</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Risques résiduels (honnêtes)</h2>
+      <ul>
+        <li>La détection par motifs et modèle est incomplète. Le rappel mesuré est affiché après chaque scan.</li>
+        <li>Les espaces réservés ne rendent pas les données anonymes ni permises selon les règles de votre organisation.</li>
+        <li>Les extensions du navigateur peuvent lire les zones de texte. L'historique du presse-papiers peut conserver le texte.</li>
+        <li>Un logiciel malveillant ou un navigateur compromis pourrait lire la mémoire; ce laboratoire ne peut l'empêcher.</li>
+        <li>La bibliothèque Transformers.js optionnelle (<code>@huggingface/transformers@4.3.0</code>) se charge depuis <code>cdn.jsdelivr.net</code> si vous activez la reconnaissance de noms. L'intégrité de sous-ressource ne peut pas s'appliquer à l'importation dynamique du module.</li>
+        <li>Le téléchargement optionnel du modèle révèle votre adresse IP et le moment à Hugging Face, pas le contenu du texte.</li>
+        <li>Ce laboratoire est un environnement de pratique et de formation, pas une approbation organisationnelle d'utiliser l'IA avec des données personnelles.</li>
+      </ul>
+
+      <p>Sources principales : <a href="https://www.icrc.org/en/data-protection-humanitarian-action-handbook">Manuel du CICR sur la protection des données</a>; <a href="https://centre.humdata.org/revised-iasc-operational-guidance-on-data-responsibility-in-humanitarian-action/">Orientations opérationnelles du CPI</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.text">ParalleX Labs Inc.</p>
+    <p class="lang-notice-footer" data-i18n="lang.noticeShort">French interface prepared with machine assistance.</p>
+    <p><a href="data-flow.html" data-i18n="footer.dataFlow">Data flow and residual risk</a></p>
+  </footer>
+
+  <script type="module" src="js/ui/static-bilingual.js"></script>
+</body>
+</html>

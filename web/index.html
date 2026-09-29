@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="i18n-title" content="meta.title">
+  <meta name="description" content="Browser practice lab and human-review training environment for checking text before pasting into generative AI tools">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'wasm-unsafe-eval'; worker-src 'self' https://cdn.jsdelivr.net blob:; connect-src 'self' https://huggingface.co https://*.huggingface.co https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data:; font-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <title>Before You Paste | Practice lab</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <strong data-i18n="home.title">Before You Paste</strong>
+      <nav aria-label="Main" data-i18n-aria="nav.main">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="practice.html" data-i18n="nav.practice">Practice</a></li>
+          <li><a href="why.html" data-i18n="nav.why">Why this matters</a></li>
+          <li><a href="facilitator.html" data-i18n="nav.facilitator">Facilitator</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="lang-switch" class="lang-switch" data-i18n="lang.switch">Français</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <p class="lang-notice lang-notice-prominent" data-i18n="lang.notice" hidden>French prepared with machine assistance; not yet reviewed by a professional translator.</p>
+    <div id="live-region" aria-live="polite" class="sr-only"></div>
+
+    <section id="view-home" class="view">
+      <h1 id="view-home-title" data-i18n="home.title">Before You Paste</h1>
+      <p class="note" data-i18n="home.tagline">A browser practice lab and human-review training environment. A last check for text you are already allowed to use with an AI tool.</p>
+      <div class="warning">
+        <p data-i18n="home.warning">This lab cannot make prohibited data permitted.</p>
+        <ul>
+          <li><a href="https://www.icrc.org/en/data-protection-humanitarian-action-handbook" data-i18n="home.source.icrc">ICRC Handbook</a></li>
+          <li><a href="https://centre.humdata.org/revised-iasc-operational-guidance-on-data-responsibility-in-humanitarian-action/" data-i18n="home.source.iasc">IASC Operational Guidance</a></li>
+          <li><a href="https://centre.humdata.org/data-responsibility-guidelines-2025/" data-i18n="home.source.ocha">OCHA Data Responsibility Guidelines</a></li>
+        </ul>
+      </div>
+      <p data-i18n="home.privacy">Your text is not sent to a remote server. Copying prepared text sends it to your operating system clipboard.</p>
+      <div class="btn-row">
+        <button type="button" class="primary" id="btn-start-check" data-i18n="home.startCheck">Check my own text</button>
+        <a class="btn" href="practice.html" data-i18n="home.startPractice">Start practice</a>
+      </div>
+      <p>
+        <a href="https://parallexlabs.github.io/humanitarian-ai-training-kit/" data-i18n="home.kitLink">Humanitarian AI Training Kit</a>
+        ·
+        <a href="https://github.com/parallexlabs/humanitarian-ai-risk-screen" data-i18n="home.riskLink">Humanitarian AI Risk Screen</a>
+      </p>
+      <h2 data-i18n="limitations.title">Limitations</h2>
+      <p data-i18n="limitations.text">This lab may miss nicknames...</p>
+    </section>
+
+    <section id="view-permission" class="view" hidden>
+      <h1 id="view-permission-title" data-i18n="permission.title">Before you scan</h1>
+      <p data-i18n="permission.intro">Answer these questions about the text you plan to check. The lab will not scan personal data unless your organization allows the tool and purpose.</p>
+      <form id="permission-form" class="permission-form">
+        <fieldset>
+          <legend data-i18n="permission.q1">Is this personal data about affected people, staff or volunteers?</legend>
+          <label><input type="radio" name="perm-personal" value="yes" id="perm-personal-yes"> <span data-i18n="permission.yes">Yes</span></label>
+          <label><input type="radio" name="perm-personal" value="no" id="perm-personal-no"> <span data-i18n="permission.no">No</span></label>
+          <label><input type="radio" name="perm-personal" value="unknown" id="perm-personal-unknown"> <span data-i18n="permission.unknown">Not sure</span></label>
+        </fieldset>
+        <fieldset>
+          <legend data-i18n="permission.q2">Is the AI tool approved by your organization for this kind of information?</legend>
+          <label><input type="radio" name="perm-tool" value="yes" id="perm-tool-yes"> <span data-i18n="permission.yes">Yes</span></label>
+          <label><input type="radio" name="perm-tool" value="no" id="perm-tool-no"> <span data-i18n="permission.no">No</span></label>
+          <label><input type="radio" name="perm-tool" value="unknown" id="perm-tool-unknown"> <span data-i18n="permission.unknown">Not sure</span></label>
+        </fieldset>
+        <fieldset>
+          <legend data-i18n="permission.q3">Is this purpose allowed under your organization's rules?</legend>
+          <label><input type="radio" name="perm-purpose" value="yes" id="perm-purpose-yes"> <span data-i18n="permission.yes">Yes</span></label>
+          <label><input type="radio" name="perm-purpose" value="no" id="perm-purpose-no"> <span data-i18n="permission.no">No</span></label>
+          <label><input type="radio" name="perm-purpose" value="unknown" id="perm-purpose-unknown"> <span data-i18n="permission.unknown">Not sure</span></label>
+        </fieldset>
+      </form>
+      <div class="btn-row">
+        <button type="button" class="primary" id="btn-perm-continue" data-i18n="permission.continue">Continue</button>
+      </div>
+      <div id="permission-blocked" class="warning" hidden></div>
+    </section>
+
+    <section id="view-check" class="view" hidden>
+      <h1 id="view-check-title" data-i18n="check.title">Check your text</h1>
+      <p data-i18n="check.instructions">Paste or type the text you plan to send to an AI chat tool.</p>
+      <aside class="local-risk-brief" data-i18n="risk.brief">Browser extensions with page access can read text boxes. Use a private window with extensions off.</aside>
+      <label for="check-input" data-i18n="check.inputLabel">Text to check</label>
+      <textarea id="check-input" dir="auto" maxlength="50000" aria-describedby="input-error model-info" data-i18n="check.inputPlaceholder" placeholder="Paste your draft here..."></textarea>
+      <p id="input-error" class="warning" role="alert" hidden></p>
+      <p id="detection-status" class="status-bar" data-i18n="check.patternOnly">Pattern and context checks only</p>
+      <p id="model-info" class="note"></p>
+      <div class="btn-row">
+        <button type="button" class="primary" id="btn-run-check" data-i18n="check.runPatterns">Run check (patterns)</button>
+        <button type="button" id="btn-enable-ner" data-i18n="check.enableNer">Download on-device name recognition</button>
+      </div>
+      <p class="note" data-i18n="check.nerDescription">Optional layer...</p>
+      <div id="ner-progress" hidden role="region" aria-labelledby="ner-progress-label">
+        <p id="ner-progress-label" class="sr-only" data-i18n="check.nerDownloading">Downloading name recognition model</p>
+        <div class="progress-bar" id="ner-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="ner-progress-label">
+          <div class="progress-bar-fill" id="ner-progress-fill"></div>
+        </div>
+        <p id="ner-progress-text" role="status" aria-live="polite"></p>
+        <button type="button" id="btn-cancel-ner" data-i18n="check.nerCancel">Cancel download</button>
+      </div>
+    </section>
+
+    <section id="view-review" class="view" hidden>
+      <h1 id="view-review-title" data-i18n="review.title">Review findings</h1>
+      <p data-i18n="review.instructions">Each finding has a label. Choose replace, generalize or keep.</p>
+      <div id="recall-panel" class="recall-panel"></div>
+      <div id="highlighted-text" class="highlighted-text" dir="auto" aria-label="Text with highlights"></div>
+      <ul id="finding-list" class="finding-list"></ul>
+      <div class="btn-row">
+        <button type="button" id="btn-add-finding" data-i18n="review.addFinding">Add selected text as finding</button>
+        <button type="button" class="primary" id="btn-prepare" data-i18n="review.continue">Prepare text</button>
+      </div>
+    </section>
+
+    <section id="view-output" class="view" hidden>
+      <h1 id="view-output-title" data-i18n="output.title">Prepared text</h1>
+      <p id="output-counts"></p>
+      <div id="prepare-error" class="warning" hidden role="alert"></div>
+      <p class="note" data-i18n="review.notAnonymous">Placeholders do not make data anonymous.</p>
+      <label for="prepared-output" data-i18n="output.preparedLabel">Prepared text</label>
+      <textarea id="prepared-output" dir="auto" readonly></textarea>
+      <div id="copy-fallback" class="warning" hidden>
+        <p data-i18n="output.copyFailed">Clipboard copy failed. Select and copy the text below manually.</p>
+        <textarea dir="auto" readonly rows="4"></textarea>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="primary" id="btn-copy" data-i18n="output.copy">Copy prepared text</button>
+        <div id="names-not-checked" class="names-not-checked" hidden>
+          <span id="names-not-checked-text"></span>
+          <button type="button" id="btn-enable-ner-output" data-i18n="output.enableNer">Turn on name recognition</button>
+        </div>
+        <button type="button" id="btn-goto-restore" data-i18n="output.restoreLink">Restore AI reply</button>
+        <button type="button" id="btn-back-review" data-i18n="output.back">Back to review</button>
+      </div>
+    </section>
+
+    <section id="view-restore" class="view" hidden>
+      <h1 id="view-restore-title" data-i18n="restore.title">Restore original details</h1>
+      <p data-i18n="restore.instructions">Paste the AI tool's reply below.</p>
+      <label for="restore-input" data-i18n="restore.inputLabel">AI reply</label>
+      <textarea id="restore-input" dir="auto"></textarea>
+      <div class="btn-row">
+        <button type="button" class="primary" id="btn-run-restore" data-i18n="restore.run">Review restoration</button>
+        <button type="button" id="btn-clear" data-i18n="restore.clear">Clear everything</button>
+      </div>
+    </section>
+
+    <section id="view-restore-review" class="view" hidden>
+      <h1 id="view-restore-review-title" data-i18n="restore.reviewTitle">Confirm restoration</h1>
+      <p data-i18n="restore.reviewInstructions">Compare each line. Placeholders the AI changed, merged or invented are flagged. Placeholders the reply does not use are listed for information.</p>
+      <table id="restore-comparison" class="restore-comparison"></table>
+      <h2 data-i18n="restore.issuesTitle">Placeholder issues</h2>
+      <ul id="restore-issues"></ul>
+      <ul id="restore-info" class="restore-info" hidden></ul>
+      <div id="restore-confirm-box">
+        <label><input type="checkbox" id="restore-confirm"> <span data-i18n="restore.confirmLabel">I have reviewed the comparison and accept the restored text.</span></label>
+        <div class="btn-row">
+          <button type="button" class="primary" id="btn-confirm-restore" data-i18n="restore.confirm">Confirm and enable copy</button>
+          <button type="button" id="btn-back-restore-input" data-i18n="restore.back">Back</button>
+        </div>
+      </div>
+      <label for="restore-output" data-i18n="restore.resultLabel">Restored text (copyable after confirmation)</label>
+      <textarea id="restore-output" dir="auto" readonly></textarea>
+      <button type="button" id="btn-copy-restored" disabled data-i18n="restore.copy">Copy restored text</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.text">ParalleX Labs Inc.</p>
+    <p class="lang-notice-footer" data-i18n="lang.noticeShort">French interface prepared with machine assistance.</p>
+    <p><a href="data-flow.html" data-i18n="footer.dataFlow">Data flow and residual risk</a></p>
+  </footer>
+
+  <script type="module" src="js/ui/app.js"></script>
+</body>
+</html>

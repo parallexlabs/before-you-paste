@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="i18n-title" content="practice.title">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <title>Practice</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <strong data-i18n="home.title">Before You Paste</strong>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="practice.html" data-i18n="nav.practice">Practice</a></li>
+          <li><a href="why.html" data-i18n="nav.why">Why this matters</a></li>
+          <li><a href="facilitator.html" data-i18n="nav.facilitator">Facilitator</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="lang-switch" class="lang-switch" data-i18n="lang.switch">Français</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <p class="lang-notice lang-notice-prominent" data-i18n="lang.notice" hidden>French notice</p>
+    <h1 data-i18n="practice.title">Practice mode</h1>
+    <p class="synthetic-label" data-i18n="practice.synthetic">SYNTHETIC</p>
+    <p data-i18n="practice.instructions">Read the passage...</p>
+
+    <h2>Passages</h2>
+    <ul id="passage-list"></ul>
+
+    <section id="view-practice-detail" hidden>
+      <div id="practice-text" class="highlighted-text" tabindex="0"></div>
+      <fieldset id="wrong-use-actions" class="wrong-use-actions" hidden>
+        <legend data-i18n="practice.wrongUse.question">What is the right action?</legend>
+        <label><input type="radio" name="wrong-use" value="do_not_paste"> <span data-i18n="practice.wrongUse.correct">Do not paste</span></label>
+        <label><input type="radio" name="wrong-use" value="replace_paste"> <span data-i18n="practice.wrongUse.replace">Replace names then paste</span></label>
+        <label><input type="radio" name="wrong-use" value="paste_as_is"> <span data-i18n="practice.wrongUse.paste">Paste as-is</span></label>
+      </fieldset>
+      <div class="btn-row">
+        <button type="button" id="btn-mark" data-i18n="practice.mark">Mark selected text</button>
+        <button type="button" class="primary" id="btn-reveal" data-i18n="practice.reveal">Show results</button>
+      </div>
+      <div id="practice-results" hidden></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.text">ParalleX Labs Inc.</p>
+    <p class="lang-notice-footer" data-i18n="lang.noticeShort">French interface prepared with machine assistance.</p>
+    <p><a href="data-flow.html" data-i18n="footer.dataFlow">Data flow and residual risk</a></p>
+  </footer>
+
+  <script type="module" src="js/ui/practice.js"></script>
+</body>
+</html>

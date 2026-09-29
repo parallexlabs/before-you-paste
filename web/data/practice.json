@@ -1,0 +1,222 @@
+{
+  "passages": [
+    {
+      "id": "en-field-visit",
+      "lang": "en",
+      "titleKey": "practice.enFieldVisit.title",
+      "synthetic": true,
+      "text": "Field visit note (SYNTHETIC): Met Fatou Diallo, age 34, teacher at Block C, Shelter 14 in village Koro-Segou. She reported water shortage. Contact: fatou.diallo@example.org or +14165550198. GPS: 12.6392, -8.0028. Born 14 March 1991.",
+      "answerKey": [
+        { "text": "Fatou Diallo", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "age 34", "type": "age", "action": "generalize", "reasonKey": "reason.age" },
+        { "text": "Block C, Shelter 14", "type": "camp_address", "action": "replace", "reasonKey": "reason.campAddress" },
+        { "text": "village Koro-Segou", "type": "place", "action": "generalize", "reasonKey": "reason.smallPlace" },
+        { "text": "fatou.diallo@example.org", "type": "email", "action": "replace", "reasonKey": "reason.email" },
+        { "text": "+14165550198", "type": "phone", "action": "replace", "reasonKey": "reason.e164" },
+        { "text": "12.6392, -8.0028", "type": "gps", "action": "replace", "reasonKey": "reason.gps" },
+        { "text": "14 March 1991", "type": "date_of_birth", "action": "generalize", "reasonKey": "reason.dob" }
+      ]
+    },
+    {
+      "id": "en-distribution",
+      "lang": "en",
+      "titleKey": "practice.enDistribution.title",
+      "synthetic": true,
+      "text": "Distribution report (SYNTHETIC): 240 hygiene kits issued at 45 Maple Street, Ottawa, ON K1A 0B1. Card payment logged 4532 1234 5678 9014 for transport. IP 192.168.1.42 recorded in system.",
+      "answerKey": [
+        { "text": "45 Maple Street", "type": "address", "action": "replace", "reasonKey": "reason.address" },
+        { "text": "K1A 0B1", "type": "postal_code", "action": "replace", "reasonKey": "reason.postal" },
+        { "text": "4532 1234 5678 9014", "type": "payment_card", "action": "replace", "reasonKey": "reason.card" },
+        { "text": "192.168.1.42", "type": "ip", "action": "replace", "reasonKey": "reason.ip" }
+      ]
+    },
+    {
+      "id": "en-referral",
+      "lang": "en",
+      "titleKey": "practice.enReferral.title",
+      "synthetic": true,
+      "text": "Referral email (SYNTHETIC): Please follow up with Client B regarding assault reported last week. She is 17 years old and disclosed domestic violence. Passport MRZ: L898902C36UTO7408122F1204159ZE184226B<<<<<10. Case number 2024-PROT-8891.",
+      "answerKey": [
+        { "text": "Client B", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "17 years old", "type": "age", "action": "generalize", "reasonKey": "reason.ageMinor" },
+        { "text": "assault", "type": "context", "action": "keep", "reasonKey": "reason.contextGbv" },
+        { "text": "domestic violence", "type": "context", "action": "keep", "reasonKey": "reason.contextGbv" },
+        { "text": "L898902C36UTO7408122F1204159ZE184226B<<<<<10", "type": "passport_mrz", "action": "replace", "reasonKey": "reason.mrz" },
+        { "text": "2024-PROT-8891", "type": "id_number", "action": "replace", "reasonKey": "reason.case" }
+      ]
+    },
+    {
+      "id": "en-roster",
+      "lang": "en",
+      "titleKey": "practice.enRoster.title",
+      "synthetic": true,
+      "text": "Volunteer roster excerpt (SYNTHETIC): James Okonkwo, j.okonkwo@ngo.ca, (613) 555-0198. Device IMEI 490154203237518 on inventory. SIN 046 454 286 on payroll form. Works with Red Crescent Society branch.",
+      "answerKey": [
+        { "text": "James Okonkwo", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "j.okonkwo@ngo.ca", "type": "email", "action": "replace", "reasonKey": "reason.email" },
+        { "text": "(613) 555-0198", "type": "phone", "action": "replace", "reasonKey": "reason.phone" },
+        { "text": "490154203237518", "type": "imei", "action": "replace", "reasonKey": "reason.imei" },
+        { "text": "046 454 286", "type": "sin", "action": "replace", "reasonKey": "reason.sin" },
+        { "text": "Red Crescent Society", "type": "organization", "action": "replace", "reasonKey": "reason.org" }
+      ]
+    },
+    {
+      "id": "en-donor",
+      "lang": "en",
+      "titleKey": "practice.enDonor.title",
+      "synthetic": true,
+      "text": "Donor story draft (SYNTHETIC): Amina, a refugee mother of three, received cash assistance. She said the program helped after fleeing without papers. IBAN GB82WEST12345698765432 was used for a pilot transfer.",
+      "answerKey": [
+        { "text": "Amina", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "without papers", "type": "context", "action": "keep", "reasonKey": "reason.contextMigration" },
+        { "text": "GB82WEST12345698765432", "type": "iban", "action": "replace", "reasonKey": "reason.iban" }
+      ]
+    },
+    {
+      "id": "en-meeting",
+      "lang": "en",
+      "titleKey": "practice.enMeeting.title",
+      "synthetic": true,
+      "text": "Meeting minutes (SYNTHETIC): Protection lead noted unaccompanied minor in camp section B. Nurse reported child hospitalized with injury. Registration number 55667788 attached. Coordinates 45°30'22\"N, 73°34'56\"W discussed for supply drop (not for sharing).",
+      "answerKey": [
+        { "text": "unaccompanied minor", "type": "context", "action": "keep", "reasonKey": "reason.contextChildren" },
+        { "text": "hospitalized", "type": "context", "action": "keep", "reasonKey": "reason.contextHealth" },
+        { "text": "injury", "type": "context", "action": "keep", "reasonKey": "reason.contextHealth" },
+        { "text": "55667788", "type": "id_number", "action": "replace", "reasonKey": "reason.registration" },
+        { "text": "45°30'22\"N, 73°34'56\"W", "type": "gps", "action": "replace", "reasonKey": "reason.gps" }
+      ]
+    },
+    {
+      "id": "en-repeated",
+      "lang": "en",
+      "titleKey": "practice.enRepeated.title",
+      "synthetic": true,
+      "text": "Case coordination note (SYNTHETIC, long): Elena Vasquez called the desk at 09:15 to confirm transport for her mother. Elena Vasquez asked whether the referral letter was ready before noon. The desk logged callback numbers +14165550198 and (416) 555-0198 in the shared shift sheet. Later notes repeat that Elena Vasquez prefers SMS and that both numbers reach the same handset. Background for facilitators only: this paragraph is intentionally long so browser memory, scrolling and repeated spans are exercised in evaluation. It mentions routine supply topics, weather delays and staffing gaps without adding new identifiers. Teams should still treat every occurrence of the same name or phone format as a separate review decision before pasting anything into an AI tool. The note closes with a reminder that Elena Vasquez will call again if the van is late.",
+      "answerKey": [
+        { "text": "Elena Vasquez", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "Elena Vasquez", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "Elena Vasquez", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "Elena Vasquez", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "+14165550198", "type": "phone", "action": "replace", "reasonKey": "reason.e164" },
+        { "text": "(416) 555-0198", "type": "phone", "action": "replace", "reasonKey": "reason.phone" }
+      ]
+    },
+    {
+      "id": "fr-visite",
+      "lang": "fr",
+      "titleKey": "practice.frVisite.title",
+      "synthetic": true,
+      "text": "Note de visite (SYNTHÉTIQUE) : Rencontre avec Marie Tremblay, âgée de 42 ans, bénéficiaire au Bloc C, abri 14, hameau de Lac-Bleu. Courriel : marie.t@exemple.ca. Tél. +33612345678. Née le 3 juin 1983.",
+      "answerKey": [
+        { "text": "Marie Tremblay", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "42 ans", "type": "age", "action": "generalize", "reasonKey": "reason.age" },
+        { "text": "Bloc C, abri 14", "type": "camp_address", "action": "replace", "reasonKey": "reason.campAddress" },
+        { "text": "hameau de Lac-Bleu", "type": "place", "action": "generalize", "reasonKey": "reason.smallPlace" },
+        { "text": "marie.t@exemple.ca", "type": "email", "action": "replace", "reasonKey": "reason.email" },
+        { "text": "+33612345678", "type": "phone", "action": "replace", "reasonKey": "reason.e164" },
+        { "text": "3 juin 1983", "type": "date_of_birth", "action": "generalize", "reasonKey": "reason.dob" }
+      ]
+    },
+    {
+      "id": "fr-distribution",
+      "lang": "fr",
+      "titleKey": "practice.frDistribution.title",
+      "synthetic": true,
+      "text": "Rapport de distribution (SYNTHÉTIQUE) : 180 kits distribués au 123, rue Saint-Denis, Montréal, QC H2X 3K8. Paiement par carte 5425 2334 3010 9903. Adresse IP 10.0.0.15 dans le journal.",
+      "answerKey": [
+        { "text": "123, rue Saint-Denis", "type": "address", "action": "replace", "reasonKey": "reason.address" },
+        { "text": "H2X 3K8", "type": "postal_code", "action": "replace", "reasonKey": "reason.postal" },
+        { "text": "5425 2334 3010 9903", "type": "payment_card", "action": "replace", "reasonKey": "reason.card" },
+        { "text": "10.0.0.15", "type": "ip", "action": "replace", "reasonKey": "reason.ip" }
+      ]
+    },
+    {
+      "id": "fr-reference",
+      "lang": "fr",
+      "titleKey": "practice.frReference.title",
+      "synthetic": true,
+      "text": "Courriel de référencement (SYNTHÉTIQUE) : Merci de suivre avec la cliente C concernant une agression signalée. Elle a 16 ans et mentionne violence conjugale. Passeport CD9876543 au dossier. Numéro de dossier 2024-PROT-4420.",
+      "answerKey": [
+        { "text": "agression", "type": "context", "action": "keep", "reasonKey": "reason.contextGbv" },
+        { "text": "16 ans", "type": "age", "action": "generalize", "reasonKey": "reason.ageMinor" },
+        { "text": "violence conjugale", "type": "context", "action": "keep", "reasonKey": "reason.contextGbv" },
+        { "text": "CD9876543", "type": "id_number", "action": "replace", "reasonKey": "reason.id" },
+        { "text": "2024-PROT-4420", "type": "id_number", "action": "replace", "reasonKey": "reason.case" }
+      ]
+    },
+    {
+      "id": "fr-benevoles",
+      "lang": "fr",
+      "titleKey": "practice.frBenevoles.title",
+      "synthetic": true,
+      "text": "Extrait de liste de bénévoles (SYNTHÉTIQUE) : Sophie Martin, sophie.m@ong.ca, 418-555-0166. IMEI 490154203237518 sur l'inventaire. NAS 130 692 544 sur le formulaire. Travaille avec la Croix-Rouge locale.",
+      "answerKey": [
+        { "text": "Sophie Martin", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "sophie.m@ong.ca", "type": "email", "action": "replace", "reasonKey": "reason.email" },
+        { "text": "418-555-0166", "type": "phone", "action": "replace", "reasonKey": "reason.phone" },
+        { "text": "490154203237518", "type": "imei", "action": "replace", "reasonKey": "reason.imei" },
+        { "text": "130 692 544", "type": "sin", "action": "replace", "reasonKey": "reason.sin" },
+        { "text": "Croix-Rouge", "type": "organization", "action": "replace", "reasonKey": "reason.org" }
+      ]
+    },
+    {
+      "id": "fr-donateur",
+      "lang": "fr",
+      "titleKey": "practice.frDonateur.title",
+      "synthetic": true,
+      "text": "Ébauche récit donateur (SYNTHÉTIQUE) : Ibrahim, demandeur d'asile et père de deux enfants, a reçu une aide en espèces. Il a mentionné être sans papiers. IBAN FR1420041010050500013M02606 pour virement pilote.",
+      "answerKey": [
+        { "text": "Ibrahim", "type": "person", "action": "replace", "reasonKey": "reason.person" },
+        { "text": "demandeur d'asile", "type": "context", "action": "keep", "reasonKey": "reason.contextMigration" },
+        { "text": "sans papiers", "type": "context", "action": "keep", "reasonKey": "reason.contextMigration" },
+        { "text": "FR1420041010050500013M02606", "type": "iban", "action": "replace", "reasonKey": "reason.iban" }
+      ]
+    },
+    {
+      "id": "fr-reunion",
+      "lang": "fr",
+      "titleKey": "practice.frReunion.title",
+      "synthetic": true,
+      "text": "Procès-verbal (SYNTHÉTIQUE) : Le responsable protection signale un enfant mineur non accompagné au secteur C. L'infirmier signale un enfant hospitalisé pour blessure. Référence 88776655 jointe. Coordonnées 46°48'10\"N, 71°12'30\"O mentionnées (ne pas partager).",
+      "answerKey": [
+        { "text": "enfant mineur non accompagné", "type": "context", "action": "keep", "reasonKey": "reason.contextChildren" },
+        { "text": "hospitalisé", "type": "context", "action": "keep", "reasonKey": "reason.contextHealth" },
+        { "text": "blessure", "type": "context", "action": "keep", "reasonKey": "reason.contextHealth" },
+        { "text": "88776655", "type": "id_number", "action": "replace", "reasonKey": "reason.registration" },
+        { "text": "46°48'10\"N, 71°12'30\"O", "type": "gps", "action": "replace", "reasonKey": "reason.gps" }
+      ]
+    },
+    {
+      "id": "en-wrong-use",
+      "lang": "en",
+      "titleKey": "practice.enWrongUse.title",
+      "synthetic": true,
+      "wrongUse": true,
+      "correctAction": "do_not_paste",
+      "text": "Beneficiary distribution list (SYNTHETIC): Do not paste into AI. 1) Elena Vasquez +12025550142 2) Tomas Okoro +447700900123 3) Priya Nair +919876543210. Purpose: draft thank-you letter.",
+      "answerKey": [
+        { "text": "Elena Vasquez", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "+12025550142", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "Tomas Okoro", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "+447700900123", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "Priya Nair", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "+919876543210", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" }
+      ]
+    },
+    {
+      "id": "fr-wrong-use",
+      "lang": "fr",
+      "titleKey": "practice.frWrongUse.title",
+      "synthetic": true,
+      "wrongUse": true,
+      "correctAction": "do_not_paste",
+      "text": "Liste de distribution aux bénéficiaires (SYNTHÉTIQUE) : Ne pas coller dans l'IA. 1) Camille Rousseau +33142865500 2) Amadou Keita +221771234567. Objectif : rédiger une lettre de remerciement.",
+      "answerKey": [
+        { "text": "Camille Rousseau", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "+33142865500", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "Amadou Keita", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "+221771234567", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" }
+      ]
+    }
+  ]
+}

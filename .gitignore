@@ -1,0 +1,10 @@
+node_modules/
+coverage/
+.DS_Store
+Thumbs.db
+*.log
+.cache/
+.transformers-cache/
+.onnx/
+test-results/
+playwright-report/
