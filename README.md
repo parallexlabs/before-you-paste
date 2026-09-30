@@ -1,3 +1,10 @@
+<p align="center" class="brand-mark">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/brand/parallex-mark-dark.png">
+    <img src=".github/brand/parallex-mark.png" alt="ParalleX Labs" width="120">
+  </picture>
+</p>
+
 # Before You Paste
 
 Before You Paste is a bilingual (English and French) practice lab for Session 1 (responsible foundations) of the [Humanitarian AI Training Kit](https://parallexlabs.github.io/humanitarian-ai-training-kit/). It helps people check text for personal and sensitive details before they paste it into a generative AI tool. It asks permission questions first, finds likely personal details on the device, lets a person review each finding and replace it with a placeholder, and later restores the original details in the AI tool's reply. The text never goes to a server.
