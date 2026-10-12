@@ -169,7 +169,7 @@ describe('patterns', () => {
 
   it('detects E.164 phone FR', () => {
     resetPatternIds();
-    const f = detectPatterns('Appelez le +33612345678 demain.');
+    const f = detectPatterns('Appelez le +16045550100 demain.');
     assert.ok(f.some((x) => x.type === 'phone'));
   });
 

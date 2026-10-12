@@ -50,10 +50,10 @@
       "lang": "en",
       "titleKey": "practice.enRoster.title",
       "synthetic": true,
-      "text": "Volunteer roster excerpt (SYNTHETIC): James Okonkwo, j.okonkwo@ngo.ca, (613) 555-0198. Device IMEI 490154203237518 on inventory. SIN 046 454 286 on payroll form. Works with Red Crescent Society branch.",
+      "text": "Volunteer roster excerpt (SYNTHETIC): James Okonkwo, j.okonkwo@example.org, (613) 555-0198. Device IMEI 490154203237518 on inventory. SIN 046 454 286 on payroll form. Works with Red Crescent Society branch.",
       "answerKey": [
         { "text": "James Okonkwo", "type": "person", "action": "replace", "reasonKey": "reason.person" },
-        { "text": "j.okonkwo@ngo.ca", "type": "email", "action": "replace", "reasonKey": "reason.email" },
+        { "text": "j.okonkwo@example.org", "type": "email", "action": "replace", "reasonKey": "reason.email" },
         { "text": "(613) 555-0198", "type": "phone", "action": "replace", "reasonKey": "reason.phone" },
         { "text": "490154203237518", "type": "imei", "action": "replace", "reasonKey": "reason.imei" },
         { "text": "046 454 286", "type": "sin", "action": "replace", "reasonKey": "reason.sin" },
@@ -106,14 +106,14 @@
       "lang": "fr",
       "titleKey": "practice.frVisite.title",
       "synthetic": true,
-      "text": "Note de visite (SYNTHÉTIQUE) : Rencontre avec Marie Tremblay, âgée de 42 ans, bénéficiaire au Bloc C, abri 14, hameau de Lac-Bleu. Courriel : marie.t@exemple.ca. Tél. +33612345678. Née le 3 juin 1983.",
+      "text": "Note de visite (SYNTHÉTIQUE) : Rencontre avec Marie Tremblay, âgée de 42 ans, bénéficiaire au Bloc C, abri 14, hameau de Lac-Bleu. Courriel : marie.t@example.org. Tél. +16045550100. Née le 3 juin 1983.",
       "answerKey": [
         { "text": "Marie Tremblay", "type": "person", "action": "replace", "reasonKey": "reason.person" },
         { "text": "42 ans", "type": "age", "action": "generalize", "reasonKey": "reason.age" },
         { "text": "Bloc C, abri 14", "type": "camp_address", "action": "replace", "reasonKey": "reason.campAddress" },
         { "text": "hameau de Lac-Bleu", "type": "place", "action": "generalize", "reasonKey": "reason.smallPlace" },
-        { "text": "marie.t@exemple.ca", "type": "email", "action": "replace", "reasonKey": "reason.email" },
-        { "text": "+33612345678", "type": "phone", "action": "replace", "reasonKey": "reason.e164" },
+        { "text": "marie.t@example.org", "type": "email", "action": "replace", "reasonKey": "reason.email" },
+        { "text": "+16045550100", "type": "phone", "action": "replace", "reasonKey": "reason.e164" },
         { "text": "3 juin 1983", "type": "date_of_birth", "action": "generalize", "reasonKey": "reason.dob" }
       ]
     },
@@ -149,10 +149,10 @@
       "lang": "fr",
       "titleKey": "practice.frBenevoles.title",
       "synthetic": true,
-      "text": "Extrait de liste de bénévoles (SYNTHÉTIQUE) : Sophie Martin, sophie.m@ong.ca, 418-555-0166. IMEI 490154203237518 sur l'inventaire. NAS 130 692 544 sur le formulaire. Travaille avec la Croix-Rouge locale.",
+      "text": "Extrait de liste de bénévoles (SYNTHÉTIQUE) : Sophie Martin, sophie.m@example.org, 418-555-0166. IMEI 490154203237518 sur l'inventaire. NAS 130 692 544 sur le formulaire. Travaille avec la Croix-Rouge locale.",
       "answerKey": [
         { "text": "Sophie Martin", "type": "person", "action": "replace", "reasonKey": "reason.person" },
-        { "text": "sophie.m@ong.ca", "type": "email", "action": "replace", "reasonKey": "reason.email" },
+        { "text": "sophie.m@example.org", "type": "email", "action": "replace", "reasonKey": "reason.email" },
         { "text": "418-555-0166", "type": "phone", "action": "replace", "reasonKey": "reason.phone" },
         { "text": "490154203237518", "type": "imei", "action": "replace", "reasonKey": "reason.imei" },
         { "text": "130 692 544", "type": "sin", "action": "replace", "reasonKey": "reason.sin" },
@@ -193,14 +193,14 @@
       "synthetic": true,
       "wrongUse": true,
       "correctAction": "do_not_paste",
-      "text": "Beneficiary distribution list (SYNTHETIC): Do not paste into AI. 1) Elena Vasquez +12025550142 2) Tomas Okoro +447700900123 3) Priya Nair +919876543210. Purpose: draft thank-you letter.",
+      "text": "Beneficiary distribution list (SYNTHETIC): Do not paste into AI. 1) Elena Vasquez +12025550142 2) Tomas Okoro +16135550101 3) Priya Nair +14165550102. Purpose: draft thank-you letter.",
       "answerKey": [
         { "text": "Elena Vasquez", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
         { "text": "+12025550142", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
         { "text": "Tomas Okoro", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
-        { "text": "+447700900123", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "+16135550101", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
         { "text": "Priya Nair", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
-        { "text": "+919876543210", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" }
+        { "text": "+14165550102", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" }
       ]
     },
     {
@@ -210,12 +210,12 @@
       "synthetic": true,
       "wrongUse": true,
       "correctAction": "do_not_paste",
-      "text": "Liste de distribution aux bénéficiaires (SYNTHÉTIQUE) : Ne pas coller dans l'IA. 1) Camille Rousseau +33142865500 2) Amadou Keita +221771234567. Objectif : rédiger une lettre de remerciement.",
+      "text": "Liste de distribution aux bénéficiaires (SYNTHÉTIQUE) : Ne pas coller dans l'IA. 1) Camille Rousseau +14185550103 2) Amadou Keita +12025550104. Objectif : rédiger une lettre de remerciement.",
       "answerKey": [
         { "text": "Camille Rousseau", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
-        { "text": "+33142865500", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
+        { "text": "+14185550103", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
         { "text": "Amadou Keita", "type": "person", "action": "do_not_paste", "reasonKey": "reason.wrongUse" },
-        { "text": "+221771234567", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" }
+        { "text": "+12025550104", "type": "phone", "action": "do_not_paste", "reasonKey": "reason.wrongUse" }
       ]
     }
   ]
