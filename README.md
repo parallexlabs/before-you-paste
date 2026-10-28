@@ -81,7 +81,7 @@ See [web/facilitator.html](web/facilitator.html) for a 20 to 30 minute remote ac
 
 ## Languages
 
-English and French interface (`web/i18n/`). French prepared with machine assistance; not yet reviewed by a professional translator.
+English and French interface (`web/i18n/`). French not yet reviewed by a professional translator.
 
 ## Related ParalleX work
 
